@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ethers": "^6.15.0",
+    "react-qr-code": "^2.0.18"
+  }
+}

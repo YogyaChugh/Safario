@@ -1,0 +1,254 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0c0c0c;
+            color: #e0e0e0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .user-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        header {
+            padding: 15px 20px;
+            background-color: #1a1a2e;
+            border-bottom: 1px solid #00cccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #00cccc;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-info span {
+            margin-right: 15px;
+            color: #00cccc;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        #map-container {
+            flex: 1;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+            background-color: #2a2a2a;
+            z-index: 1;
+        }
+        
+        .danger-legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #333;
+        }
+        
+        .location-info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+            max-width: 300px;
+        }
+        
+        .user-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .user-panel button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #00cccc;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .user-panel button:hover {
+            background-color: #00aaaa;
+        }
+        
+        .location-marker {
+            border-radius: 50%;
+            background-color: #3399ff;
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(51, 153, 255, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+        
+        .status-bar {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+            max-width: 300px;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .leaflet-container {
+            background: #1a1a2e;
+        }
+        
+        .user-id-display {
+            background-color: rgba(0, 204, 204, 0.2);
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+        
+        .login-form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.9);
+            padding: 20px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+            width: 300px;
+        }
+        
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .login-form button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #00cccc;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        /* Custom marker styles */
+        .current-location-marker {
+            background-color: #3399ff;
+            border: 3px solid white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            box-shadow: 0 0 10px rgba(51, 153, 255, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+        
+        .current-location-marker::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 30px;
+            height: 30px;
+            border: 2px solid #3399ff;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: ripple 2s infinite;
+        }
+        
+        @keyframes ripple {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+            }
+            100% {
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+            }
+        }
+        
+        .location-pointer {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid #3399ff;
+            filter: drop-shadow(0 0 5px rgba(51, 153, 255, 0.7));
+            z-index: 1001;
+            transform: translate(-50%, -100%);
+        }

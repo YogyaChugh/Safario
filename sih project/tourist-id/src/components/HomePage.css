@@ -1,0 +1,557 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Import Google Font (Material Symbols + Inter for text) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded');
+
+.homepage {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease, outline-color 0.3s ease;
+  outline: 8px solid #ffffff; /* default light outline */
+  box-sizing: border-box;
+}
+
+.homepage.light {
+  background-color: #ffffff;
+  color: #000000;
+  outline-color: #ffffff; /* light mode border */
+}
+
+.homepage.dark {
+  background-color: #000000;
+  color: #ffffff;
+  outline-color: #000000; /* dark mode border */
+}
+
+/* Header */
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.homepage.dark .homepage-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.icon, .arrow {
+  font-family: 'Material Symbols Rounded';
+}
+
+
+/* Buttons & Pills (Mode + Language) */
+.option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.homepage.dark .option-btn {
+  background: #1b1b1b;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.option-btn:hover {
+  background: #e0e0e0;
+}
+.homepage.dark .option-btn:hover {
+  background: #2a2a2a;
+}
+
+.option-btn .icon {
+  font-size: 1.1rem;
+}
+
+.option-btn .label {
+  font-weight: 500;
+}
+
+/* Language Dropdown */
+.lang-box {
+  min-width: 160px;
+  justify-content: space-between;
+}
+
+.lang-box .arrow {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: inherit;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 20;
+}
+
+.homepage.dark .lang-dropdown {
+  border: 1px solid #555;
+  background: #1b1b1b;
+}
+
+.lang-option {
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lang-option:hover {
+  background: #f0f0f0;
+}
+
+.homepage.dark .lang-option:hover {
+  background: #2a2a2a;
+}
+
+.lang-option.selected {
+  font-weight: 600;
+}
+
+.lang-option .check {
+  font-size: 0.9rem;
+  color: #007aff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  opacity: 0.85;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 0.7rem 1.4rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.primary-btn:hover {
+  background-color: #333;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.secondary-btn:hover {
+  background-color: #f2f2f2;
+}
+
+.homepage.dark .primary-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+.homepage.dark .primary-btn:hover {
+  background-color: #ddd;
+}
+
+.homepage.dark .secondary-btn {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.homepage.dark .secondary-btn:hover {
+  background-color: #222;
+}
+/* Feature Box with background image */
+.feature-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* text on left/right as needed */
+  padding: 6rem 2rem;
+  gap: 2rem;
+  background-image: url('../assets/image1.jpg'); /* background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #ffffff; /* text color on background */
+  opacity: 0;
+  animation: fadeInContainer 1.5s ease forwards;
+  border-radius: 12px; /* optional rounded edges */
+  min-height: 600px;
+}
+
+/* Text animation from right */
+.feature-text {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.5s;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); /* make text readable on image */
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInContainer {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .feature-box {
+    padding: 4rem 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@keyframes slideInBottom {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.feature-text {
+  position: relative;
+  z-index: 2; /* above background */
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 1s ease forwards;
+  animation-delay: 0.5s;
+  color: #000; /* change text color to black */
+  font-weight: 600;
+  text-align: center;
+}
+
+.role-selection-section {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+/* Big Box Container */
+.big-box {
+  width: 90%;
+  max-width: 1000px;
+  background-color: #ffffff; /* light mode default */
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  border:2px solid rgba(121, 115, 115, 0.2);
+}
+
+/* Subtitle */
+.role-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* Two-column sections */
+.role-columns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Individual role box */
+.role-column {
+  flex: 1 1 300px;
+  background-color: #dadada; /* light mode inner box */
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(43, 43, 43, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border:2px solid rgba(148, 148, 148, 0.2);
+}
+
+.role-column:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transform: translateY(-3px);
+}
+
+/* Dark mode overrides */
+.homepage.dark .big-box {
+  background-color: #1f1c1c;
+}
+
+.homepage.dark .role-subtitle {
+  color: #fff;
+}
+
+.homepage.dark .role-column {
+  background-color: #1c1c1d;
+  color: #fff;
+}
+
+.homepage.dark .role-column:hover {
+  box-shadow: 0 8px 25px rgba(201, 201, 201, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .role-columns {
+    flex-direction: column;
+  }
+}
+/* App Intro Section */
+.app-intro-section {
+  text-align: center;
+  margin: 2rem 1rem 0rem 1rem;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000; /* light mode text */
+  margin-bottom: 1rem;
+}
+
+.app-subtitle {
+  font-size: 1.25rem;
+  color: #333; /* light mode subtitle */
+}
+
+/* Dark mode overrides for intro section */
+.homepage.dark .app-title,
+.homepage.dark .app-subtitle {
+  color: #ffffff;
+}
+/* Register Button */
+.role-info {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.role-info li {
+  margin-bottom: 0.6rem;
+}
+
+.role-btn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Light Mode Button */
+.homepage.light .role-btn {
+  background-color: #000000; /* black */
+  color: #ffffff; /* white text */
+}
+
+.homepage.light .role-btn:hover {
+  background-color: #333333;
+}
+
+/* Dark Mode Button */
+.homepage.dark .role-btn {
+  background-color: #ffffff; /* white */
+  color: #000000; /* black text */
+}
+
+.homepage.dark .role-btn:hover {
+  background-color: #dddddd;
+}
+
+/* Arrow */
+.role-btn .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.role-btn:hover .arrow {
+  transform: translateX(5px); /* slide arrow on hover */
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* All in one feature style*/
+.key-features-section {
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.features-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* stack on smaller screens */
+}
+
+/* Make feature cards match big-box style */
+.feature-card {
+  flex: 1 1 400px;
+  background-color: #ffffff; /* same as big-box light */
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* same as big-box */
+  border: 2px solid rgba(121, 115, 115, 0.2); /* same border as big-box */
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  transform: translateY(-3px); /* same hover effect as role-column */
+}
+
+/* Dark mode same as big-box */
+.homepage.dark .feature-card {
+  background-color: #1f1c1c;
+  color: #fff;
+  border: 2px solid rgba(148, 148, 148, 0.2);
+}
+.homepage.dark .feature-card:hover {
+  box-shadow: 0 8px 25px rgba(201, 201, 201, 0.2);
+  transform: translateY(-3px); /* same hover effect as role-column */
+}
+
+.feature-card h3 {
+  margin-bottom: 1rem;
+  font-size:1.5rem;
+}
+
+.feature-card ul {
+  list-style-type:disc;
+  padding: 0;
+}
+
+.feature-card li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  
+}
+
+.feature-image-box {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-image-box img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .features-row {
+    flex-direction: column-reverse; /* image below text on mobile */
+    text-align: center;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+
+  .feature-card ul {
+    padding-left: 0;
+  }
+}

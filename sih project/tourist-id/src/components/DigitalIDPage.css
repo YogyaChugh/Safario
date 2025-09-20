@@ -1,0 +1,347 @@
+.digitalid-page {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Center Heading */
+/* Heading */
+.page-heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1.5rem 0;
+  color: #000; /* default light mode */
+}
+
+.homepage.dark .page-heading {
+  color: #fff; /* Dark mode */
+}
+
+.digitalid-page.dark .page-heading {
+  color: #fff; /* Dark mode */
+}
+
+
+
+.id-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+}
+
+.id-info {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+.id-qr img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Status + Button Row */
+.status-action-box {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status-text {
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 65%;
+}
+
+.status-text.not-verified {
+  color: #d9534f;
+}
+
+.status-text.verified {
+  color: #28a745;
+}
+
+/* Reuse role-btn style */
+.role-btn {
+  margin-left: 1rem;
+  padding: 0.8rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  background-color: #000;
+  color: #fff;
+}
+
+.role-btn:hover {
+  background-color: #333;
+}
+
+.role-btn .arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.role-btn:hover .arrow {
+  transform: translateX(5px);
+}
+/* Header */
+.homepage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: inherit;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.homepage.dark .homepage-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.header-options {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.icon, .arrow {
+  font-family: 'Material Symbols Rounded';
+}
+
+
+/* Buttons & Pills (Mode + Language) */
+.option-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f1f1f1;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.homepage.dark .option-btn {
+  background: #1b1b1b;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.option-btn:hover {
+  background: #e0e0e0;
+}
+.homepage.dark .option-btn:hover {
+  background: #2a2a2a;
+}
+
+.option-btn .icon {
+  font-size: 1.1rem;
+}
+
+.option-btn .label {
+  font-weight: 500;
+}
+
+/* Language Dropdown */
+.lang-box {
+  min-width: 160px;
+  justify-content: space-between;
+}
+
+.lang-box .arrow {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: inherit;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 20;
+}
+
+.homepage.dark .lang-dropdown {
+  border: 1px solid #555;
+  background: #1b1b1b;
+}
+
+.lang-option {
+  padding: 0.7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.lang-option:hover {
+  background: #f0f0f0;
+}
+
+.homepage.dark .lang-option:hover {
+  background: #2a2a2a;
+}
+
+.lang-option.selected {
+  font-weight: 600;
+}
+
+.lang-option .check {
+  font-size: 0.9rem;
+  color: #007aff;
+}
+/* Tricolor ID Card */
+.id-card.tricolor {
+  width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  background: #fff;
+  margin: 2rem auto;
+  border: 2px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+/* Header with saffron */
+.id-card.tricolor .id-header {
+  background: #ff9933; /* saffron */
+  color: #fff;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+/* Body with white */
+.id-card.tricolor .id-body {
+  background: #ffffff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+/* Photo */
+.id-card.tricolor .id-photo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  object-fit: cover;
+}
+/* Info */
+.id-card.tricolor .id-info {
+  flex: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #000;
+}
+/* QR on right */
+.id-card.tricolor .id-qr img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Footer with green */
+.id-card.tricolor::after {
+  content: "";
+  display: block;
+  background: #138808; /* green */
+  height: 12px;
+  width: 100%;
+}
+/* Layout: ID left, Verification right */
+.id-layout {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* stack on small screens */
+}
+
+.status-action-box {
+  flex: 1;
+  min-width: 320px;
+  background: var(--box-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: var(--text-color);
+}
+.smart-id-header {
+  text-align: center;       /* Centers the text */
+  font-size: 16px;          /* Adjust to make it smaller */
+  font-weight: 500;         /* Optional: medium weight */
+  margin: 10px 0;           /* Optional: space above and below */
+}
+.smart-id-header {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.id-layout {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.id-card {
+  flex: 1;
+  min-width: 280px;
+}
+
+.status-action-box {
+  flex: 1;
+  min-width: 220px;
+  margin-top: 30px; /* slightly lower */
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.role-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
