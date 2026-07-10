@@ -1,69 +1,85 @@
-# React + TypeScript + Vite
+# 🚀 Safario (Tourist-ID)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Safario** is a modern, decentralized Web3-powered digital identity application designed for tourists. It provides a seamless and secure way for travelers to register, verify, and carry their digital identity across borders using blockchain technology.
 
-Currently, two official plugins are available:
+## 📖 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Safario (internally known as `tourist-id`) simplifies the travel experience by giving users a "Smart ID". This ID contains essential travel and personal details, securely generated and accessible via a QR code. The app is built with a focus on accessibility, offering full internationalization (i18n) and a responsive, mobile-first design.
 
-## Expanding the ESLint configuration
+## ✨ Key Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **🌐 Web3 & Blockchain Integration:** Secure identity management backed by Web3 technologies.
+- **📱 Smart Digital ID:** Automatically generates a verifiable digital ID card with a QR code for quick scanning.
+- **🌍 Multilingual Support:** Built-in internationalization (i18n) with support for English and Hindi (and extensible to more languages).
+- **🌗 Theming:** Built-in Dark and Light mode options for better user experience.
+- **🗺️ Interactive Maps:** Integration with Leaflet for geospatial features and location tracking.
+- **📸 Step-by-Step Registration:** A smooth, multi-step onboarding process capturing personal info, travel details, and ID photos.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **Frontend Framework:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Web3 & Crypto:** `ethers.js`, `@web3modal`, `@walletconnect`
+- **Mapping:** `leaflet`, `react-leaflet`
+- **Internationalization:** `i18next`, `react-i18next`
+- **Utilities:** `react-qr-code`, `react-icons`, `react-slick`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed on your local machine:
+- **Node.js** (v18 or higher recommended)
+- **npm** or **yarn**
+
+### Installation
+
+1. Clone the repository and navigate to the project directory:
+   ```bash
+   cd Safario
+   ```
+
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Locally
+
+To start the development server with Hot Module Replacement (HMR):
+
+```bash
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The application will typically be available at `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Project Structure
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+Safario/
+├── public/               # Static assets
+├── src/
+│   ├── assets/           # Images, icons, etc.
+│   ├── components/       # Reusable React components (HomePage, RegisterPage, DigitalIDPage, etc.)
+│   ├── context/          # React Contexts for global state management
+│   ├── locales/          # i18n translation files
+│   ├── App.tsx           # Main application routing and layout
+│   ├── main.tsx          # Application entry point
+│   └── index.css         # Global CSS and Tailwind directives
+├── package.json          # Project metadata and dependencies
+├── tailwind.config.js    # Tailwind CSS configuration
+└── vite.config.ts        # Vite configuration
 ```
+
+## 📜 Available Scripts
+
+- `npm run dev`: Starts the Vite development server.
+- `npm run build`: Compiles TypeScript and builds the app for production into the `dist` folder.
+- `npm run preview`: Bootstraps a local web server to preview the production build.
+- `npm run lint`: Runs ESLint to check for code quality and formatting issues.
+
+## 📄 License
+
+This project is proprietary and confidential unless otherwise specified.
