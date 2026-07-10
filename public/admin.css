@@ -1,0 +1,288 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #0c0c0c;
+            color: #e0e0e0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        
+        .login-form {
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            width: 350px;
+            text-align: center;
+        }
+        
+        .login-form h2 {
+            margin-bottom: 20px;
+            color: #00ffff;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+        
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .login-form button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00cccc;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .login-form button:hover {
+            background-color: #00aaaa;
+        }
+        
+        .admin-container {
+            display: none;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        header {
+            padding: 15px 20px;
+            background-color: #1a1a2e;
+            border-bottom: 1px solid #00cccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        h1 {
+            font-size: 24px;
+            color: #00cccc;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+        
+        .user-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .user-info span {
+            margin-right: 15px;
+            color: #00cccc;
+        }
+        
+        .logout-btn {
+            padding: 8px 15px;
+            background-color: #ff3366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+            width: 100%;
+        }
+        
+        #map-container {
+            flex: 7;
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+            background-color: #2a2a2a;
+            z-index: 1;
+        }
+        
+        #console-container {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            background-color: #1a1a2e;
+            border-left: 1px solid #00cccc;
+            min-width: 300px;
+        }
+        
+        #console-output {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            font-size: 14px;
+            line-height: 1.4;
+            background-color: #0f0f1e;
+        }
+        
+        #console-input-container {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #00cccc;
+            background-color: #1a1a2e;
+        }
+        
+        #console-prompt {
+            padding: 5px 10px;
+            background-color: #0f0f1e;
+            color: #00cccc;
+        }
+        
+        #console-input {
+            flex: 1;
+            padding: 5px 10px;
+            background-color: #0f0f1e;
+            color: #00cccc;
+            border: 1px solid #00cccc;
+            outline: none;
+        }
+        
+        .log-entry {
+            margin-bottom: 8px;
+        }
+        
+        .command {
+            color: #00cccc;
+        }
+        
+        .response {
+            color: #ffffff;
+            margin-left: 20px;
+        }
+        
+        .error {
+            color: #ff3366;
+        }
+        
+        .success {
+            color: #00ffaa;
+        }
+        
+        .warning {
+            color: #ffcc00;
+        }
+        
+        .info {
+            color: #3399ff;
+        }
+        
+        .leaflet-draw-toolbar {
+            display: block !important; /* Make sure draw toolbar is visible */
+        }
+        
+        .danger-legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border: 1px solid #333;
+        }
+        
+        .location-info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+            max-width: 300px;
+        }
+        
+        .admin-panel {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            z-index: 1000;
+            background-color: rgba(26, 26, 46, 0.8);
+            padding: 10px;
+            border: 1px solid #00cccc;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        .admin-panel button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #00cccc;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .admin-panel button:hover {
+            background-color: #00aaaa;
+        }
+        
+        .location-marker {
+            border-radius: 50%;
+            background-color: #3399ff;
+            border: 2px solid white;
+            box-shadow: 0 0 10px rgba(51, 153, 255, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Fix for Leaflet map tiles */
+        .leaflet-container {
+            background: #1a1a2e;
+            outline: none;
+        }
+        
+        .leaflet-top {
+            top: 120px;
+        }

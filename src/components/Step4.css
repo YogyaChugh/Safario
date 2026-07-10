@@ -1,0 +1,98 @@
+/* Light mode (default) */
+.step4-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode */
+.step4-container.dark {
+  background-color: #2b2b2b; /* less black than pure black */
+}
+
+
+.id-card {
+  width: 400px;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+.id-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.id-card h3 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.id-card p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.qr-code {
+  margin-top: 20px;
+}
+
+.success-message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.button-group .back-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-group .back-button:hover {
+  background-color: #e53935;
+}
+
+.button-group .next-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-group .next-button:hover {
+  background-color: #45a049;
+}
+
+.smart-id-heading {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}

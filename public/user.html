@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Danger Zone Tracker</title>
+<!-- Leaflet CSS -->
+<link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<link href="user.css" rel="stylesheet"/></head>
+<body>
+<div class="user-container" id="userContainer" style="display: none;">
+<header>
+<h1>DANGER ZONE TRACKER</h1>
+<div class="user-info">
+<span id="userLocation">Detecting location...</span>
+<span class="user-id-display" id="userIdDisplay">ID: -</span>
+<span id="status">Connected</span>
+</div>
+</header>
+<div class="container">
+<div id="map-container">
+<div id="map"></div>
+<div class="location-info">
+<h3>Your Location</h3>
+<div id="locationDetails">Waiting for GPS...</div>
+</div>
+<div class="user-panel">
+<h3>User Tools</h3>
+<button id="refreshZonesBtn">Refresh Zones</button>
+<button id="updateLocationBtn">Update Location</button>
+</div>
+<div class="danger-legend">
+<h3>Danger Levels</h3>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #00ff00;"></div>
+<span>Level 1: Low</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #ffff00;"></div>
+<span>Level 2: Moderate</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #ff9900;"></div>
+<span>Level 3: High</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #ff0000;"></div>
+<span>Level 4: Extreme</span>
+</div>
+</div>
+<div class="status-bar">
+<div id="statusMessage">Status: Connected to server</div>
+<div id="lastUpdate">Last update: Never</div>
+</div>
+</div>
+</div>
+</div>
+<div class="login-form" id="loginForm">
+<h2>User Login</h2>
+<input id="username" placeholder="Username" type="text" value="user1"/>
+<button id="loginBtn">Login</button>
+</div>
+
+<script src="user.js"></script></body>
+<!-- Add this to your HTML
+<script src="https://cdn.jsdelivr.net/npm/leaflet-point-in-polygon@1.0.0/dist/leaflet-point-in-polygon.min.js"></script> -->
+</html>

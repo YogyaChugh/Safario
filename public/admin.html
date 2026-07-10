@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Danger Zone Mapper</title>
+<!-- Leaflet CSS -->
+<link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<!-- Leaflet Draw -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" rel="stylesheet"/>
+<link href="admin.css" rel="stylesheet"/></head>
+<body>
+<div class="login-container" id="loginContainer">
+<div class="login-form">
+<h2>Admin Login</h2>
+<input id="username" placeholder="Username" type="text" value="admin"/>
+<input id="password" placeholder="Password" type="password" value="password"/>
+<button id="loginBtn">Login</button>
+</div>
+</div>
+<div class="admin-container" id="adminContainer">
+<header>
+<h1>DANGER ZONE MAPPER ADMIN CONSOLE</h1>
+<div class="user-info">
+<span id="userLocation">Detecting location...</span>
+<button class="logout-btn" id="logoutBtn">Logout</button>
+</div>
+</header>
+<div class="container">
+<div id="map-container">
+<div id="map"></div>
+<div class="location-info">
+<h3>Your Location</h3>
+<div id="locationDetails">Waiting for GPS...</div>
+</div>
+<div class="admin-panel">
+<h3>Admin Tools</h3>
+<button id="detectLocationBtn">Detect My Location</button>
+<button id="createZoneBtn">Create New Zone</button>
+<button id="showAllZonesBtn">Show All Zones</button>
+<button id="clearZonesBtn">Clear All Zones</button>
+</div>
+<div class="danger-legend">
+<h3>Danger Levels</h3>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #00ff00;"></div>
+<span>Level 1: Low</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #ffff00;"></div>
+<span>Level 2: Moderate</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #ff9900;"></div>
+<span>Level 3: High</span>
+</div>
+<div class="legend-item">
+<div class="legend-color" style="background-color: #ff0000;"></div>
+<span>Level 4: Extreme</span>
+</div>
+</div>
+</div>
+<div id="console-container">
+<div id="console-output">
+<div class="log-entry">
+<span class="info">Admin system initialized. Type 'help' for available commands.</span>
+</div>
+<div class="log-entry">
+<span class="info">Danger Zone Mapper Admin Console v2.0 ready</span>
+</div>
+</div>
+<div id="console-input-container">
+<div id="console-prompt">admin&gt;</div>
+<input autocomplete="off" id="console-input" type="text">
+</input></div>
+</div>
+</div>
+</div>
+
+<script src="admin.js"></script></body>
+</html>

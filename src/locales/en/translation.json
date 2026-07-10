@@ -1,0 +1,152 @@
+{
+  "header": {
+    "logo": "Safario",
+    "darkMode": "Dark Mode",
+    "lightMode": "Light Mode",
+    "english": "English",
+    "hindi": "Hindi"
+  },
+  "intro": {
+    "title": "India's Smart Tourist Safety App",
+    "subtitle": "An advanced safety monitoring app that helps tourists travel safely"
+  },
+  "roles": {
+    "subtitle": "Choose your role and enjoy independent and safe travel with Safario",
+    "tourist": {
+      "title": "I am a Tourist",
+      "description": "Register for digital ID, receive safety alerts, and access emergency features",
+      "features": {
+        "id": "> Digital ID Creation",
+        "score": "> Safety Score Tracking",
+        "geo": "> Geo-Fencing Alerts",
+        "panic": "> Emergency Panic Button"
+      },
+      "button": "Register as Tourist"
+    },
+    "authority": {
+      "title": "Tourism / Police Authority",
+      "description": "Monitor tourist activities, manage incidents, and ensure visitor safety",
+      "features": {
+        "dashboard": "> Real-time Dashboard",
+        "incident": "> Incident Management",
+        "tracking": "> Tourist Tracking",
+        "response": "> Emergency Response"
+      },
+      "button": "Authority Dashboard"
+    }
+  },
+  "features": {
+    "title": "Key Features",
+    "digitalID": {
+      "title": "Digital Tourist ID",
+      "point1": "Secure Blockchain ID",
+      "point2": "KYC (Aadhaar/Passport) Integration",
+      "point3": "Travel and Emergency Contact",
+      "point4": "Stay-based Validity",
+      "point5": "Tamper-proof Record"
+    },
+    "mobileApp": {
+      "title": "Tourist Mobile App",
+      "point1": "Automatic Safety Score",
+      "point2": "Geo-Fencing Alerts",
+      "point3": "One-Tap Panic Button",
+      "point4": "Real-Time Tracking"
+    },
+    "aiAnomaly": {
+      "title": "AI Anomaly Detection",
+      "point1": "Identify Unusual Patterns",
+      "point2": "Detect Emergency Situations",
+      "point3": "Flag Missing Tourists"
+    },
+    "authority": {
+      "heading": "Tourism & Police Dashboard",
+      "point1": "Live Tourist Clusters",
+      "point2": "Digital ID Access",
+      "point3": "Automated e-FIR",
+      "point4": "Faster Coordination"
+    }
+  },
+  "register": {
+    "title": "Tourist Registration",
+    "subtitle": "Create your Digital Tourist ID for safe travel in India",
+    "personalInfo": {
+      "title": "Personal Information"
+    },
+    "travelDetails": {
+      "title": "Travel Details"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "age": "Age",
+      "phone": "+91xxxxxxxxxx",
+      "nationality": "Nationality",
+      "idOrPassport": "Passport / Aadhaar Number",
+      "departureCity": "Departure City",
+      "arrivalCity": "Arrival City",
+      "departureDate": "Departure Date",
+      "returnDate": "Return Date",
+      "purpose": "Purpose of Travel",
+      "purposeTourism": "Tourism",
+      "purposeBusiness": "Business",
+      "purposeEducation": "Education",
+      "purposeOther": "Other",
+      "nationalities": {
+        "Indian": "Indian",
+        "American": "American",
+        "Korean": "Korean",
+        "Japanese": "Japanese",
+        "Other": "Other"
+      },
+      "placeholder": {
+        "name": "Enter your full name",
+        "email": "Enter your email",
+        "age": "Enter your age",
+        "phone": "Enter your phone number",
+        "nationality": "Select your nationality",
+        "idOrPassport": "Enter passport or Aadhaar number",
+        "departureCity": "Enter departure city",
+        "arrivalCity": "Enter arrival city",
+        "purpose": "Select purpose"
+      },
+      "submit": "Submit"
+    },
+    "next": "Next",
+    "prev": "Previous"
+  },
+  "nav": {
+    "home": "Home",
+    "digitalId": "Digital ID",
+    "map": "Map",
+    "profile": "Profile",
+    "sosAlert": "🚨 Emergency! Alert is being sent to authority..."
+  },
+  "digitalId": {
+    "heading": "Your Digital ID Card",
+    "noId": "No digital ID found. Please register first.",
+    "pending": "Not verified yet... verify it from authority to download",
+    "verifyBtn": "Verify",
+    "verified": "Your ID is verified. Download your digital ID card to use it.",
+    "downloadBtn": "Download Digital ID"
+  },
+  "step3": {
+    "heading": "Upload your photo and connect wallet",
+    "photoUpload": "Upload Photo",
+    "connectWallet": "Connect Wallet",
+    "connected": "Connected: {{address}}",
+    "back": "Back",
+    "submit": "Submit",
+    "metamaskAlert": "MetaMask not found. Please install it from https://metamask.io/",
+    "walletError": "Failed to connect wallet."
+  },
+  "step4": {
+    "heading": "Smart Tourist ID",
+    "nationality": "Nationality",
+    "idNo": "Aadhaar / Passport Number",
+    "blockchainId": "ID",
+    "validTill": "Valid Till",
+    "successMessage": "Your ID has been successfully created.",
+    "back": "Back",
+    "goToDigitalId": "Go to Digital ID"
+  }
+}

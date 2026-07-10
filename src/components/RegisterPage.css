@@ -1,0 +1,205 @@
+.register-intro-section {
+  text-align: center;
+  margin: 2rem 1rem 3rem 1rem;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.register-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.register-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.homepage.dark .register-subtitle {
+  color: #ccc;
+}
+
+.registration-steps-section {
+  width: 95%;
+  max-width: 800px;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.steps-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.step.active {
+  background-color: #000;
+}
+
+.homepage.dark .step.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.line {
+  flex: 1;
+  height: 3px;
+  background-color: #ccc;
+}
+
+/* Form container */
+.step-form {
+  max-width: 600px; /* keep input boxes width */
+  margin: 1 auto 1 0; /* align to left with no auto right margin */
+  text-align: left;
+  gap: 1rem;
+}
+
+/* Light mode form box */
+.form-box {
+  background: #f5f5f5; /* Light mode background */
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc; /* Light grey border */
+  width: 100%; /* keep input boxes same width */
+  max-width: 600px; /* restrict max width */
+}
+/* Dark mode form box */
+.homepage.dark .form-box {
+  background: #000000; /* Black background */
+  border: 1px solid #444; /* Slight grey border */
+}
+
+.form-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-half-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-half {
+  flex: 1;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 10px;
+  border: 0px solid #ccc;
+  font-size: 1rem;
+  background-color: #e0e0e0; /* Dim grey background */
+}
+
+.homepage.dark input,
+.homepage.dark select {
+  background-color: #2b2b2b; /* Slightly darker grey in dark mode */
+  color: #fff;
+  border: 0px solid #444; /* Slight grey border in dark mode */
+}
+
+input:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.step-form button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.homepage.dark .step-form button {
+  background-color: #fff;
+  color: #000;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between; /* pushes first button left, second button right */
+  align-items: center;
+  margin-top: 20px; /* optional spacing */;
+}
+.form-actions.single-button {
+  justify-content: flex-end; /* override for single button */
+}
+
+.step-next {
+  background-color: #000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  
+}
+
+.step-next:hover {
+  background-color: #333;
+}
+
+.back-arrow-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.homepage.dark .back-arrow-box {
+  background-color: #fff;
+  color: #000;
+}
