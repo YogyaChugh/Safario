@@ -15,7 +15,7 @@ interface PersonalInfo {
   phone: string;
   nationality: string;
   idNo: string;
-  // note: photo is saved to localStorage by Step3, so it's optional here
+  photo?: string;
 }
 
 const RegisterPage: React.FC = () => {
@@ -97,7 +97,6 @@ const RegisterPage: React.FC = () => {
 
      
   const goPrev = () => setCurrentStep((s) => Math.max(1, s - 1));
-  const goNext = () => setCurrentStep((s) => Math.min(4, s + 1));
 
   return (
     <div className={`homepage ${darkMode ? "dark" : "light"}`}>

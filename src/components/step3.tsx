@@ -35,10 +35,10 @@ const Step3: React.FC<Step3Props> = ({ goPrev, onNext , idNo,arrivalDate,setqrDa
   const { t } = useTranslation();
   const [photo, setPhoto] = useState<string | null>(null); // base64
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
-  const [provider, setProvider] = useState<any>(null);
+  // const [provider, setProvider] = useState<any>(null); // unused
   const [signer, setSigner] = useState<any>(null);
-  const [rawData, setRawData] = useState<any>("");const [address, setAddress] = useState<any>("");
-  const [qr, setQr] = useState<string>("");
+  // const [rawData, setRawData] = useState<any>(""); // unused
+  // const [qr, setQr] = useState<string>(""); // unused
 
   
 const createTourist=async(): Promise<CreateTouristResult>=> {
@@ -50,7 +50,6 @@ const createTourist=async(): Promise<CreateTouristResult>=> {
     try {
       const contract = new ethers.Contract(contractAddress, abi, signer);
       const tourist_data = idNo + arrivalDate; // create local rawData
-      setRawData(tourist_data); // update state
 
       
       const tx=await contract.createTourist(tourist_data);
@@ -77,9 +76,9 @@ const createTourist=async(): Promise<CreateTouristResult>=> {
       const sig = await prov.getSigner();
       const addr = await sig.getAddress();
 
-      setProvider(prov);
+      // setProvider(prov);
       setSigner(sig);
-      setAddress(addr);
+      setWalletAddress(addr);
     } catch (err) {
       console.error("Connection failed:", err);
     }
