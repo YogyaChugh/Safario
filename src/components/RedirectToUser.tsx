@@ -1,6 +1,6 @@
 function RedirectToUser() {
   const handleClick = () => {
-    window.location.replace("/user.html"); // opens user.html from public folder
+    window.location.replace(import.meta.env.BASE_URL + "user.html"); // opens user.html from public folder
   };
 
   return (

@@ -58,7 +58,7 @@ const DigitalIDPage: React.FC = () => {
   };
 
   return (
-    <div className={`homepage ${darkMode ? "dark" : "light"}`}>
+    <div className={`homepage min-h-screen bg-animated-mesh ${darkMode ? "dark" : "light"}`}>
       {/* Header */}
       <header className="homepage-header">
         <div className="logo">{t("header.logo")}</div>

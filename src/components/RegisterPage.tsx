@@ -99,7 +99,7 @@ const RegisterPage: React.FC = () => {
   const goPrev = () => setCurrentStep((s) => Math.max(1, s - 1));
 
   return (
-    <div className={`homepage ${darkMode ? "dark" : "light"}`}>
+    <div className={`homepage min-h-screen bg-animated-mesh ${darkMode ? "dark" : "light"}`}>
       {/* Header */}
       <header className="homepage-header">
         <div className="logo">{t("header.logo")}</div>

@@ -45,7 +45,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className={`homepage ${darkMode ? "dark" : "light"}`}>
+    <div className={`homepage min-h-screen transition-colors duration-500 bg-animated-mesh ${darkMode ? "dark" : ""}`}>
       {/* Header */}
       <header className="homepage-header">
         <div className="logo">{t("header.logo")}</div>
@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
         </ul>
         <button
           className="role-btn"
-          onClick={() => (window.location.href = `${window.location.origin}/admin.html`)}
+          onClick={() => (window.location.href = import.meta.env.BASE_URL + "admin.html")}
         >
           {t("roles.authority.button")} <span className="arrow">arrow_forward</span>
         </button>
